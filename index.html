@@ -5,52 +5,128 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Daniel Gathinwa | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
   <header>
-    <h1>Daniel Gathinwa</h1>
-    <p>ICT Professional | DevOps Learner | Web Dev Enthusiast</p>
+    <div class="container">
+      <h1>Hi, I'm Daniel Gathinwa</h1>
+      <p>ICT Professional | DevOps Learner | Full Stack Explorer</p>
+      <a href="#contact" class="btn">Get In Touch</a>
+    </div>
   </header>
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
+    <div class="container nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I'm a passionate ICT graduate learning daily through projects, self-study, and real-world exploration. I’m currently doing the Mozilla Projects and building solid foundations in full-stack development and cloud technologies.</p>
-  </section>
+  <main>
+    <section id="about" class="container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <img src="assets/profile.jpg" alt="Daniel Gathinwa" class="profile-pic">
+        <p>
+          I'm a passionate ICT graduate from Kenya. I create web applications, automate things, explore AWS, and constantly learn. I’m working through the Mozilla Projects to sharpen my dev, cloud, and real-world problem-solving skills.
+        </p>
+		<a href="resume.pdf" class="btn-download" target="_blank">📄 View My Resume</a>
+      </div>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Simple Calculator (HTML/CSS/JS)</strong> – <a href="https://github.com/DGathinwa/simple-calculator">View on GitHub</a></li>
-      <li><strong>Contact Form (PHP/MySQL)</strong> – <a href="https://github.com/DGathinwa/contact-form">View on GitHub</a></li>
-      <li><strong>Mozilla AWS Tasks</strong> – In Progress</li>
-    </ul>
-  </section>
+<section id="projects" class="container">
+  <h2>Projects</h2>
+  <div class="projects-grid">
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Web Development – HTML, CSS, JS, PHP</li>
-      <li>Database – MySQL, SQL</li>
-      <li>Cloud – AWS (EC2, S3, SES)</li>
-      <li>Tools – Git, GitHub, VS Code, WSL</li>
-    </ul>
-  </section>
+    <div class="project-card">
+      <h3><i class="fas fa-calculator"></i> Simple Calculator</h3>
+      <p>A responsive calculator built with HTML, CSS & JS for quick calculations.</p>
+      <div class="buttons">
+        <a href="https://dgathinwa.github.io/simple-calculator" target="_blank" class="btn-view">Live Demo</a>
+        <a href="https://github.com/DGathinwa/simple-calculator" target="_blank" class="btn-code">GitHub</a>
+      </div>
+    </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: dgathinwa@example.com</p>
-    <p>GitHub: <a href="https://github.com/DGathinwa">github.com/DGathinwa</a></p>
-  </section>
+    <div class="project-card">
+      <h3><i class="fas fa-envelope"></i> Contact Form</h3>
+      <p>Form system built with PHP & MySQL with validation and email integration.</p>
+      <div class="buttons">
+        <a href="#" class="btn-view disabled">Live Demo (Coming Soon)</a>
+        <a href="https://github.com/DGathinwa/contact-form" target="_blank" class="btn-code">GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3><i class="fas fa-cloud"></i> Mozilla AWS Projects</h3>
+      <p>Hands-on projects: EC2, S3, LightSail, SES & AWS CLI. Weekly updates posted.</p>
+      <div class="buttons">
+        <a href="#" class="btn-view disabled">Coming Soon</a>
+        <a href="#" class="btn-code disabled">Private Repo</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    <section id="skills" class="container">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li><i class="fas fa-code"></i> HTML, CSS, JavaScript, PHP</li>
+        <li><i class="fas fa-database"></i> MySQL, SQL</li>
+        <li><i class="fas fa-cloud"></i> AWS EC2, S3, SES, LightSail</li>
+        <li><i class="fas fa-terminal"></i> Git, GitHub, WSL</li>
+        <li><i class="fas fa-language"></i> German (Beginner)</li>
+      </ul>
+    </section>
+
+<section id="contact" class="container">
+  <h2>Contact Me</h2>
+  <p>Want to collaborate, ask a question, or hire me? Fill out the form below:</p>
+
+  <form id="contact-form">
+    <input type="text" name="user_name" placeholder="Your Name" required>
+    <input type="email" name="user_email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+    <button type="submit">Send Message</button>
+    <p id="form-status" class="form-status"></p>
+  </form>
+
+  <div class="alt-contact">
+    <p><i class="fas fa-envelope"></i> dgathinwa@example.com</p>
+    <p><i class="fab fa-github"></i> <a href="https://github.com/DGathinwa" target="_blank">github.com/DGathinwa</a></p>
+  </div>
+</section>
+
+<section id="blog" class="container">
+  <h2>Blog</h2>
+  <p>I share lessons from projects, tech tips, and reflections on learning. Stay tuned!</p>
+  <div class="blog-cards">
+    <div class="blog-card">
+      <h3>Coming Soon: My First AWS Project Breakdown</h3>
+      <p>A deep dive into S3 versioning, EC2 setup, and cost control using Free Tier.</p>
+      <span class="badge">#AWS #MozillaProject</span>
+    </div>
+    <div class="blog-card">
+      <h3>My Journey From D+ to Dev 💪</h3>
+      <p>How I rebuilt my life and confidence through learning, tech, and grit.</p>
+      <span class="badge">#Growth #RealTalk</span>
+    </div>
+  </div>
+</section>
+
+
+  </main>
 
   <footer>
-    <p>© 2025 Daniel Gathinwa</p>
+    <p>&copy; 2025 Daniel Gathinwa. Built with coffee, code & courage ☕💻🦁</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
